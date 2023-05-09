@@ -130,56 +130,140 @@ class _HomeUiState extends State<HomeUi> {
                     ),
                     SizedBox(height: 20),
                     Padding(
-                      padding: const EdgeInsets.all(10.0),
+                      padding: const EdgeInsets.only(
+                        left: 20,
+                        right: 20,
+                      ),
                       child: Container(
                         color: Colors.white,
                         child: Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: Column(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                'PAID TO YOU',
-                                style: TextStyle(
-                                    fontSize: 10, fontWeight: FontWeight.bold),
-                              ),
-                              Row(
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                children: [
-                                  Padding(
-                                    padding: const EdgeInsets.all(30.0),
-                                    child: Column(
-                                      children: [
-                                        Column(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  'PAID & OUTSTANDING PAYMENTS',
+                                  style: TextStyle(
+                                      fontSize: 10,
+                                      fontWeight: FontWeight.bold),
+                                ),
+                                Row(
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  children: [
+                                    Padding(
+                                      padding: const EdgeInsets.all(50.0),
+                                      child: Column(
+                                        children: [
+                                          Text(
+                                            'THIS MONTH',
+                                            style: TextStyle(fontSize: 10),
+                                          ),
+                                          Text(
+                                            '\$15,000',
+                                            style: TextStyle(
+                                                fontWeight: FontWeight.bold,
+                                                fontSize: 15),
+                                          ),
+                                          Text(
+                                            '\$13k LAST MONTH',
+                                            style: TextStyle(
+                                                color: Colors.green,
+                                                fontSize: 9),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                    Container(
+                                      padding: EdgeInsets.all(30),
+                                      color: Colors.grey[100],
+                                      height: 100,
+                                      width: 1,
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.all(50.0),
+                                      child: Column(
+                                        children: [
+                                          Text(
+                                            'THIS YEAR',
+                                            style: TextStyle(fontSize: 10),
+                                          ),
+                                          Text(
+                                            '\$75,000',
+                                            style: TextStyle(
+                                                fontWeight: FontWeight.bold,
+                                                fontSize: 15),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                                Row(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
+                                    children: [
+                                      Padding(
+                                        padding: const EdgeInsets.all(49.0),
+                                        child: Column(
                                           children: [
                                             Text(
-                                              'THIS MONTH',
+                                              'PENDING PAYOUT',
                                               style: TextStyle(fontSize: 10),
                                             ),
                                             Text(
-                                              '\$15,000',
+                                              '\$6,000',
                                               style: TextStyle(
                                                   fontWeight: FontWeight.bold,
                                                   fontSize: 15),
                                             ),
                                           ],
                                         ),
-                                        Text(
-                                          '\$13k LAST MONTH',
-                                          style: TextStyle(
-                                              color: Colors.green, fontSize: 9),
-                                        )
-                                      ],
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ],
-                          ),
+                                      ),
+                                      Container(
+                                        padding: EdgeInsets.all(30),
+                                        color: Colors.grey[100],
+                                        height: 100,
+                                        width: 1,
+                                      ),
+                                      Column(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.start,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        children: [
+                                          Padding(
+                                            padding: const EdgeInsets.all(50.0),
+                                            child: Column(
+                                              children: [
+                                                Text(
+                                                  'INVOICES',
+                                                  style:
+                                                      TextStyle(fontSize: 10),
+                                                ),
+                                                Text(
+                                                  '\$8,000',
+                                                  style: TextStyle(
+                                                      fontWeight:
+                                                          FontWeight.bold,
+                                                      fontSize: 15),
+                                                ),
+                                                Text(
+                                                  '\$3K OVERUE',
+                                                  style: TextStyle(
+                                                      color: Colors.red,
+                                                      fontSize: 9),
+                                                ),
+                                              ],
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ]),
+                              ]),
                         ),
                       ),
-                    ),
+                    )
                   ],
                 ),
               ],
