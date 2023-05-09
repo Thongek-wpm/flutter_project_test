@@ -47,11 +47,23 @@ class _HomeUiState extends State<HomeUi> {
                       ),
                       child: Row(
                         children: [
-                          Column(
-                            children: [
-                              Text('09:45'),
-                              Text('Join'),
-                            ],
+                          Container(
+                            color: Colors.blue[300],
+                            child: Column(
+                              children: [
+                                Text(
+                                  '09:45',
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 15,
+                                  ),
+                                ),
+                                Text(
+                                  'Join',
+                                  style: TextStyle(color: Colors.white),
+                                ),
+                              ],
+                            ),
                           ),
                           Column(
                             children: [
