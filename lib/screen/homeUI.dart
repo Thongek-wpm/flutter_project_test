@@ -39,6 +39,42 @@ class _HomeUiState extends State<HomeUi> {
                         top: MediaQuery.of(context).size.width * 0.1,
                       ),
                     ),
+                    Container(
+                      padding: EdgeInsets.all(10),
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      child: Row(
+                        children: [
+                          Column(
+                            children: [
+                              Text('09:45'),
+                              Text('Join'),
+                            ],
+                          ),
+                          Column(
+                            children: [
+                              Text(
+                                'Resume consutation',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                              Row(
+                                children: [
+                                  Icon(Icons.access_time_sharp),
+                                  Text('30 min'),
+                                  Icon(Icons.person_rounded),
+                                  Text('John Fonter'),
+                                ],
+                              ),
+                            ],
+                          ),
+                          Icon(Icons.arrow_forward_ios),
+                        ],
+                      ),
+                    ),
                   ],
                 ),
               ],
