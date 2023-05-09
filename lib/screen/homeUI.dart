@@ -34,18 +34,19 @@ class _HomeUiState extends State<HomeUi> {
                     clipBehavior: Clip.antiAlias,
                     decoration: BoxDecoration(
                       color: Colors.white,
+                      border: Border.all(color: Colors.blue),
                       borderRadius: BorderRadius.circular(10),
                     ),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
                         Container(
-                          padding: EdgeInsets.all(10),
+                          padding: EdgeInsets.all(5),
                           color: Colors.blue[500],
                           child: Column(
                             children: [
                               Padding(
-                                padding: EdgeInsets.all(0.5),
+                                padding: EdgeInsets.all(1),
                               ),
                               Text(
                                 '09:45',
@@ -54,7 +55,7 @@ class _HomeUiState extends State<HomeUi> {
                                   fontSize: 15,
                                 ),
                               ),
-                              Padding(padding: EdgeInsets.only(bottom: 5)),
+                              Padding(padding: EdgeInsets.all(5)),
                               Text(
                                 'Join',
                                 style: TextStyle(color: Colors.white),
@@ -108,12 +109,73 @@ class _HomeUiState extends State<HomeUi> {
                           ],
                         ),
                         Padding(
-                          padding: EdgeInsets.only(left: 100),
+                          padding: EdgeInsets.only(left: 50, right: 50),
                         ),
                         Icon(Icons.arrow_forward_ios),
                       ],
                     ),
                   ),
+                ),
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    SizedBox(height: 20),
+                    Text(
+                      ' Revenue',
+                      style: TextStyle(
+                        fontSize: 15,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    SizedBox(height: 20),
+                    Padding(
+                      padding: const EdgeInsets.all(10.0),
+                      child: Container(
+                        color: Colors.white,
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                'PAID TO YOU',
+                                style: TextStyle(
+                                    fontSize: 10, fontWeight: FontWeight.bold),
+                              ),
+                              Row(
+                                children: [
+                                  Padding(
+                                    padding: const EdgeInsets.all(30.0),
+                                    child: Column(
+                                      children: [
+                                        Text(
+                                          'THIS MONTH',
+                                          style: TextStyle(fontSize: 10),
+                                        ),
+                                        Text(
+                                          '\$15,000',
+                                          style: TextStyle(
+                                              fontWeight: FontWeight.bold,
+                                              fontSize: 15),
+                                        ),
+                                        Text(
+                                          '\$13k LAST MONTH',
+                                          style: TextStyle(
+                                              color: Colors.green, fontSize: 9),
+                                        )
+                                      ],
+                                    ),
+                                  )
+                                ],
+                              )
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
               ],
             ),
