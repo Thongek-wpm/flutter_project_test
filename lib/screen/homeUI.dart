@@ -145,20 +145,25 @@ class _HomeUiState extends State<HomeUi> {
                                     fontSize: 10, fontWeight: FontWeight.bold),
                               ),
                               Row(
+                                crossAxisAlignment: CrossAxisAlignment.center,
                                 children: [
                                   Padding(
                                     padding: const EdgeInsets.all(30.0),
                                     child: Column(
                                       children: [
-                                        Text(
-                                          'THIS MONTH',
-                                          style: TextStyle(fontSize: 10),
-                                        ),
-                                        Text(
-                                          '\$15,000',
-                                          style: TextStyle(
-                                              fontWeight: FontWeight.bold,
-                                              fontSize: 15),
+                                        Column(
+                                          children: [
+                                            Text(
+                                              'THIS MONTH',
+                                              style: TextStyle(fontSize: 10),
+                                            ),
+                                            Text(
+                                              '\$15,000',
+                                              style: TextStyle(
+                                                  fontWeight: FontWeight.bold,
+                                                  fontSize: 15),
+                                            ),
+                                          ],
                                         ),
                                         Text(
                                           '\$13k LAST MONTH',
@@ -167,9 +172,9 @@ class _HomeUiState extends State<HomeUi> {
                                         )
                                       ],
                                     ),
-                                  )
+                                  ),
                                 ],
-                              )
+                              ),
                             ],
                           ),
                         ),
