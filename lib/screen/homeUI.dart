@@ -23,11 +23,15 @@ class _HomeUiState extends State<HomeUi> {
                 ),
               ),
               Row(
-                children: [
+                children: const [
                   Text(
                     'Starts in 5 minutes',
-                    style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
-                  )
+                    style: TextStyle(
+                      fontSize: 15,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  
                 ],
               ),
             ],
