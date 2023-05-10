@@ -61,6 +61,9 @@ class _DashboardUiState extends State<DashboardUi> {
                               Text('Resume edits'),
                             ],
                           ),
+                          SizedBox(
+                            height: 20,
+                          ),
                           Row(
                             children: [
                               Icon(
@@ -80,6 +83,9 @@ class _DashboardUiState extends State<DashboardUi> {
                               Text('Interview prep'),
                             ],
                           ),
+                          SizedBox(
+                            height: 20,
+                          ),
                           Row(
                             children: [
                               Icon(
@@ -98,6 +104,9 @@ class _DashboardUiState extends State<DashboardUi> {
                               ),
                               Text('Education...'),
                             ],
+                          ),
+                          SizedBox(
+                            height: 20,
                           ),
                           Row(
                             children: [
@@ -171,10 +180,83 @@ class _DashboardUiState extends State<DashboardUi> {
                         ),
                       ),
                     ],
-                  )
+                  ),
                 ],
               ),
             ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(15.0),
+            child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Text(
+                    'Clients',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  Container(
+                      color: Colors.white,
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Row(
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: [
+                                Padding(
+                                  padding: const EdgeInsets.all(50.0),
+                                  child: Column(
+                                    children: [
+                                      Text(
+                                        'CLIENT COUNT',
+                                        style: TextStyle(fontSize: 10),
+                                      ),
+                                      Text(
+                                        '\200',
+                                        style: TextStyle(
+                                            fontWeight: FontWeight.bold,
+                                            fontSize: 15),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                                SizedBox(
+                                  height: 10,
+                                  child: Container(
+                                    padding: EdgeInsets.all(30),
+                                    color: Colors.grey[100],
+                                    height: 100,
+                                    width: 1,
+                                  ),
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.all(50.0),
+                                  child: Column(
+                                    children: [
+                                      Text(
+                                        'AVG SEEISONS',
+                                        style: TextStyle(fontSize: 10),
+                                      ),
+                                      Text(
+                                        '\3 ',
+                                        style: TextStyle(
+                                            fontWeight: FontWeight.bold,
+                                            fontSize: 15),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      )),
+                ]),
           ),
         ],
       ),
