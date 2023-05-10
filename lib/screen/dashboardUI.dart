@@ -1,5 +1,3 @@
-import 'dart:ffi';
-
 import 'package:flutter/material.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
 
@@ -11,15 +9,6 @@ class DashboardUi extends StatefulWidget {
 }
 
 class _DashboardUiState extends State<DashboardUi> {
-  dynamic getString() {
-    [SalesData('Resume edits',35),SalesData('Interview prep',30),SalesData('Education',20),SalesData('Other Services',15),];
-  }
-  class SatesData{
-    String x;
-    Double y;
-    SalesData (this.x,)
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -59,8 +48,12 @@ class _DashboardUiState extends State<DashboardUi> {
                                   width: 100,
                                   child: SfCartesianChart(
                                     series: DoughnutSeries(
-                                        xValueMapper: xValueMapper,
-                                        yValueMapper: yValueMapper),
+                                      dataSource: getString(),
+                                      xValueMapper: (SalesData dataList, _) =>
+                                          dataList.x,
+                                      yValueMapper: (SalesData dataList, _) =>
+                                          dataList.y,
+                                    ),
                                   ),
                                 ),
                                 Icon(
@@ -346,4 +339,20 @@ class _DashboardUiState extends State<DashboardUi> {
       ),
     );
   }
+}
+
+dynamic getString() {
+  List<SalesData> dataList = <SalesData>[
+    SalesData('Resume edits', 35),
+    SalesData('Interview Prep', 30),
+    SalesData('Education', 20),
+    SalesData('Other services', 15)
+  ];
+  return dataList;
+}
+
+class SalesData {
+  String x;
+  double y;
+  SalesData(this.x, this.y);
 }
