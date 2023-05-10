@@ -1,3 +1,4 @@
+// ignore: file_names
 import 'package:flutter/material.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
 
@@ -43,30 +44,36 @@ class _DashboardUiState extends State<DashboardUi> {
                           children: [
                             Row(
                               children: [
-                                SfCartesianChart(series: [
-                                  DoughnutSeries<SalesData, String>(
-                                    dataSource: getStringData(),
-                                    xValueMapper: (SalesData dataList, _) =>
-                                        dataList.x,
-                                    yValueMapper: (SalesData dataList, _) =>
-                                        dataList.y,
+                                Container(
+                                  width: 150,
+                                  height: 150,
+                                  child: SfCircularChart(
+                                    series: [
+                                      DoughnutSeries<Sales, String>(
+                                        dataSource: getString(),
+                                        xValueMapper: (Sales dataList, _) =>
+                                            dataList.x,
+                                        yValueMapper: (Sales dataList, _) =>
+                                            dataList.y,
+                                      )
+                                    ],
                                   ),
-                                ]),
-                                Icon(
+                                ),
+                                const Icon(
                                   Icons.circle,
                                   color: Colors.blue,
                                 ),
-                                Padding(
+                                const Padding(
                                   padding: EdgeInsets.only(left: 5),
                                 ),
-                                Text(
+                                const Text(
                                   '35%',
                                   style: TextStyle(fontWeight: FontWeight.bold),
                                 ),
-                                Padding(
+                                const Padding(
                                   padding: EdgeInsets.only(left: 5),
                                 ),
-                                Text('Resume edits'),
+                                const Text('Resume edits'),
                               ],
                             ),
                             const SizedBox(
@@ -76,7 +83,7 @@ class _DashboardUiState extends State<DashboardUi> {
                               children: const [
                                 Icon(
                                   Icons.circle,
-                                  color: Colors.yellow,
+                                  color: Color.fromARGB(255, 202, 48, 94),
                                 ),
                                 Padding(
                                   padding: EdgeInsets.only(left: 5),
@@ -98,7 +105,7 @@ class _DashboardUiState extends State<DashboardUi> {
                               children: const [
                                 Icon(
                                   Icons.circle,
-                                  color: Colors.pink,
+                                  color: Colors.pinkAccent,
                                 ),
                                 Padding(
                                   padding: EdgeInsets.only(left: 5),
@@ -120,7 +127,7 @@ class _DashboardUiState extends State<DashboardUi> {
                               children: const [
                                 Icon(
                                   Icons.circle,
-                                  color: Colors.grey,
+                                  color: Colors.deepOrangeAccent,
                                 ),
                                 Padding(
                                   padding: EdgeInsets.only(left: 5),
@@ -337,18 +344,23 @@ class _DashboardUiState extends State<DashboardUi> {
   }
 }
 
-dynamic getStringData() {
-  List<SalesData> dataList = <SalesData>[
-    SalesData('', 35),
-    SalesData('', 30),
-    SalesData('', 20),
-    SalesData('', 15)
+class SalesData {
+  double x, y;
+  SalesData(this.x, this.y);
+}
+
+dynamic getString() {
+  List<Sales> dataList = <Sales>[
+    Sales('', 35),
+    Sales('', 30),
+    Sales('', 20),
+    Sales('', 15)
   ];
   return dataList;
 }
 
-class SalesData {
+class Sales {
   String x;
   double y;
-  SalesData(this.x, this.y);
+  Sales(this.x, this.y);
 }
