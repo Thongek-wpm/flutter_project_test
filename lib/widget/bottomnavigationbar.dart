@@ -52,7 +52,7 @@ class _BottomWidgetState extends State<BottomWidget> {
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.person),
-            label: 'Profile',
+            label: 'Videos',
           ),
         ],
         currentIndex: _selectedIndex,
