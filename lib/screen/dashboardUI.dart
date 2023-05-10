@@ -10,8 +10,20 @@ class DashboardUi extends StatefulWidget {
 class _DashboardUiState extends State<DashboardUi> {
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Text('dashboard'),
+    return Scaffold(
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisAlignment: MainAxisAlignment.start,
+        children: [
+          Padding(
+            padding: EdgeInsets.all(15.0),
+            child: Text(
+              'LIFETIME SERVICES BREAKDONW',
+              style: TextStyle(fontSize: 11, fontWeight: FontWeight.bold),
+            ),
+          )
+        ],
+      ),
     );
   }
 }

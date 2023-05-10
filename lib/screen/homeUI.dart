@@ -111,7 +111,10 @@ class _HomeUiState extends State<HomeUi> {
                         Padding(
                           padding: EdgeInsets.only(left: 50, right: 50),
                         ),
-                        Icon(Icons.arrow_forward_ios),
+                        Icon(
+                          Icons.arrow_forward_ios,
+                          color: Colors.blue,
+                        ),
                       ],
                     ),
                   ),
