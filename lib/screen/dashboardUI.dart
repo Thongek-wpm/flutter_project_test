@@ -16,7 +16,7 @@ class _DashboardUiState extends State<DashboardUi> {
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
           Padding(
-            padding: EdgeInsets.only(left: 15, right: 15),
+            padding: const EdgeInsets.only(left: 15, right: 15),
             child: Container(
               clipBehavior: Clip.antiAlias,
               decoration: BoxDecoration(
@@ -27,8 +27,8 @@ class _DashboardUiState extends State<DashboardUi> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
+                  const Padding(
+                    padding: EdgeInsets.all(8.0),
                     child: Text(
                       'LIFETIME SERVICES BREAKDONW',
                       style:
@@ -37,13 +37,13 @@ class _DashboardUiState extends State<DashboardUi> {
                   ),
                   Row(
                     children: [
-                      SizedBox(
+                      const SizedBox(
                         width: 200,
                       ),
                       Column(
                         children: [
                           Row(
-                            children: [
+                            children: const [
                               Icon(
                                 Icons.circle,
                                 color: Colors.blue,
@@ -61,11 +61,11 @@ class _DashboardUiState extends State<DashboardUi> {
                               Text('Resume edits'),
                             ],
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 20,
                           ),
                           Row(
-                            children: [
+                            children: const [
                               Icon(
                                 Icons.circle,
                                 color: Colors.yellow,
@@ -83,11 +83,11 @@ class _DashboardUiState extends State<DashboardUi> {
                               Text('Interview prep'),
                             ],
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 20,
                           ),
                           Row(
-                            children: [
+                            children: const [
                               Icon(
                                 Icons.circle,
                                 color: Colors.pink,
@@ -105,11 +105,11 @@ class _DashboardUiState extends State<DashboardUi> {
                               Text('Education...'),
                             ],
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 20,
                           ),
                           Row(
-                            children: [
+                            children: const [
                               Icon(
                                 Icons.circle,
                                 color: Colors.grey,
@@ -135,7 +135,7 @@ class _DashboardUiState extends State<DashboardUi> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Container(
-                        padding: EdgeInsets.all(15),
+                        padding: const EdgeInsets.all(15),
                         width: double.infinity,
                         child: ElevatedButton(
                           style: ElevatedButton.styleFrom(
@@ -144,8 +144,8 @@ class _DashboardUiState extends State<DashboardUi> {
                             ),
                           ),
                           onPressed: () {},
-                          child: Padding(
-                            padding: const EdgeInsets.symmetric(vertical: 8.0),
+                          child: const Padding(
+                            padding: EdgeInsets.symmetric(vertical: 8.0),
                             child: Text(
                               'Create invoice',
                               style: TextStyle(fontSize: 15),
@@ -159,7 +159,7 @@ class _DashboardUiState extends State<DashboardUi> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Container(
-                        padding: EdgeInsets.only(left: 15, right: 15),
+                        padding: const EdgeInsets.only(left: 15, right: 15),
                         width: double.infinity,
                         child: ElevatedButton(
                           style: ElevatedButton.styleFrom(
@@ -169,8 +169,8 @@ class _DashboardUiState extends State<DashboardUi> {
                             ),
                           ),
                           onPressed: () {},
-                          child: Padding(
-                            padding: const EdgeInsets.symmetric(vertical: 8.0),
+                          child: const Padding(
+                            padding: EdgeInsets.symmetric(vertical: 8.0),
                             child: Text(
                               'View all invoices',
                               style:
@@ -191,7 +191,7 @@ class _DashboardUiState extends State<DashboardUi> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  Text(
+                  const Text(
                     'Clients',
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
@@ -211,7 +211,7 @@ class _DashboardUiState extends State<DashboardUi> {
                               Padding(
                                 padding: const EdgeInsets.all(50.0),
                                 child: Column(
-                                  children: [
+                                  children: const [
                                     Text(
                                       'CLIENT COUNT',
                                       style: TextStyle(fontSize: 10),
@@ -228,7 +228,7 @@ class _DashboardUiState extends State<DashboardUi> {
                               SizedBox(
                                 height: 10,
                                 child: Container(
-                                  padding: EdgeInsets.all(30),
+                                  padding: const EdgeInsets.all(30),
                                   color: Colors.grey[100],
                                   height: 100,
                                   width: 1,
@@ -237,7 +237,7 @@ class _DashboardUiState extends State<DashboardUi> {
                               Padding(
                                 padding: const EdgeInsets.all(50.0),
                                 child: Column(
-                                  children: [
+                                  children: const [
                                     Text(
                                       'AVG SEEISONS',
                                       style: TextStyle(fontSize: 10),
@@ -254,7 +254,7 @@ class _DashboardUiState extends State<DashboardUi> {
                             ],
                           ),
                           Row(
-                            children: [
+                            children: const [
                               Text(
                                 'TOP 5 CLIENTS',
                                 style: TextStyle(fontSize: 10),
@@ -273,23 +273,23 @@ class _DashboardUiState extends State<DashboardUi> {
                               Padding(
                                 padding: const EdgeInsets.only(top: 15.0),
                                 child: ClipRRect(
+                                  borderRadius: BorderRadius.circular(100.0),
                                   child: Image.network(
                                     'https://media.customon.com/unsafe/1200x1200/img.customon.com/img/6385167/20157,12,2,0,34,160,32.227488151659,20,30,3cd2f9515baa0f9365fa68e7ac9e9670/merchantimagenew/youre-my-preson-hoodie-navy.jpg',
                                     width: 50,
                                     height: 50,
                                     fit: BoxFit.cover,
                                   ),
-                                  borderRadius: BorderRadius.circular(100.0),
                                 ),
                               ),
-                              Padding(
-                                padding: const EdgeInsets.only(left: 8.0),
+                              const Padding(
+                                padding: EdgeInsets.only(left: 8.0),
                               ),
-                              Text('Alan Cooper'),
-                              Padding(
-                                padding: const EdgeInsets.only(left: 150.0),
+                              const Text('Alan Cooper'),
+                              const Padding(
+                                padding: EdgeInsets.only(left: 150.0),
                               ),
-                              Text('30')
+                              const Text('30')
                             ],
                           ),
                           Row(
@@ -297,23 +297,23 @@ class _DashboardUiState extends State<DashboardUi> {
                               Padding(
                                 padding: const EdgeInsets.only(top: 15.0),
                                 child: ClipRRect(
+                                  borderRadius: BorderRadius.circular(100.0),
                                   child: Image.network(
                                     'https://media.customon.com/unsafe/1200x1200/img.customon.com/img/6385167/20157,12,2,0,34,160,32.227488151659,20,30,3cd2f9515baa0f9365fa68e7ac9e9670/merchantimagenew/youre-my-preson-hoodie-navy.jpg',
                                     width: 50,
                                     height: 50,
                                     fit: BoxFit.cover,
                                   ),
-                                  borderRadius: BorderRadius.circular(100.0),
                                 ),
                               ),
-                              Padding(
-                                padding: const EdgeInsets.only(left: 8.0),
+                              const Padding(
+                                padding: EdgeInsets.only(left: 8.0),
                               ),
-                              Text('Alan Cooper'),
-                              Padding(
-                                padding: const EdgeInsets.only(left: 150.0),
+                              const Text('Alan Cooper'),
+                              const Padding(
+                                padding: EdgeInsets.only(left: 150.0),
                               ),
-                              Text('30')
+                              const Text('30')
                             ],
                           )
                         ],

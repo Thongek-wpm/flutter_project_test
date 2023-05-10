@@ -18,10 +18,10 @@ class _HomeUiState extends State<HomeUi> {
               mainAxisAlignment: MainAxisAlignment.end,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Padding(
+                const Padding(
                   padding: EdgeInsets.all(15.0),
                 ),
-                Text(
+                const Text(
                   ' Starts in 5 minutes',
                   style: TextStyle(
                     fontSize: 15,
@@ -29,7 +29,7 @@ class _HomeUiState extends State<HomeUi> {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsets.all(15.0),
+                  padding: const EdgeInsets.all(15.0),
                   child: Container(
                     clipBehavior: Clip.antiAlias,
                     decoration: BoxDecoration(
@@ -41,10 +41,10 @@ class _HomeUiState extends State<HomeUi> {
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
                         Container(
-                          padding: EdgeInsets.all(5),
+                          padding: const EdgeInsets.all(5),
                           color: Colors.blue[500],
                           child: Column(
-                            children: [
+                            children: const [
                               Padding(
                                 padding: EdgeInsets.all(1),
                               ),
@@ -63,25 +63,25 @@ class _HomeUiState extends State<HomeUi> {
                             ],
                           ),
                         ),
-                        Padding(
+                        const Padding(
                           padding: EdgeInsets.all(15),
                         ),
                         Column(
                           mainAxisAlignment: MainAxisAlignment.start,
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text(
+                            const Text(
                               'Resume consutation',
                               style: TextStyle(
                                   fontWeight: FontWeight.bold, fontSize: 15),
                             ),
-                            SizedBox(
+                            const SizedBox(
                               height: 10,
                             ),
                             Row(
                               mainAxisAlignment: MainAxisAlignment.start,
                               crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
+                              children: const [
                                 Icon(
                                   Icons.access_time_sharp,
                                   color: Colors.grey,
@@ -108,10 +108,10 @@ class _HomeUiState extends State<HomeUi> {
                             ),
                           ],
                         ),
-                        Padding(
+                        const Padding(
                           padding: EdgeInsets.only(left: 50, right: 50),
                         ),
-                        Icon(
+                        const Icon(
                           Icons.arrow_forward_ios,
                           color: Colors.blue,
                         ),
@@ -123,15 +123,15 @@ class _HomeUiState extends State<HomeUi> {
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    SizedBox(height: 20),
-                    Text(
+                    const SizedBox(height: 20),
+                    const Text(
                       ' Revenue',
                       style: TextStyle(
                         fontSize: 15,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                    SizedBox(height: 20),
+                    const SizedBox(height: 20),
                     Padding(
                       padding: const EdgeInsets.only(
                         left: 20,
@@ -145,7 +145,7 @@ class _HomeUiState extends State<HomeUi> {
                               mainAxisAlignment: MainAxisAlignment.start,
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Text(
+                                const Text(
                                   'PAID & OUTSTANDING PAYMENTS',
                                   style: TextStyle(
                                       fontSize: 10,
@@ -157,7 +157,7 @@ class _HomeUiState extends State<HomeUi> {
                                     Padding(
                                       padding: const EdgeInsets.all(50.0),
                                       child: Column(
-                                        children: [
+                                        children: const [
                                           Text(
                                             'THIS MONTH',
                                             style: TextStyle(fontSize: 10),
@@ -178,7 +178,7 @@ class _HomeUiState extends State<HomeUi> {
                                       ),
                                     ),
                                     Container(
-                                      padding: EdgeInsets.all(30),
+                                      padding: const EdgeInsets.all(30),
                                       color: Colors.grey[100],
                                       height: 100,
                                       width: 1,
@@ -186,7 +186,7 @@ class _HomeUiState extends State<HomeUi> {
                                     Padding(
                                       padding: const EdgeInsets.all(50.0),
                                       child: Column(
-                                        children: [
+                                        children: const [
                                           Text(
                                             'THIS YEAR',
                                             style: TextStyle(fontSize: 10),
@@ -209,7 +209,7 @@ class _HomeUiState extends State<HomeUi> {
                                       Padding(
                                         padding: const EdgeInsets.all(49.0),
                                         child: Column(
-                                          children: [
+                                          children: const [
                                             Text(
                                               'PENDING PAYOUT',
                                               style: TextStyle(fontSize: 10),
@@ -224,7 +224,7 @@ class _HomeUiState extends State<HomeUi> {
                                         ),
                                       ),
                                       Container(
-                                        padding: EdgeInsets.all(30),
+                                        padding: const EdgeInsets.all(30),
                                         color: Colors.grey[100],
                                         height: 100,
                                         width: 1,
@@ -238,7 +238,7 @@ class _HomeUiState extends State<HomeUi> {
                                           Padding(
                                             padding: const EdgeInsets.all(50.0),
                                             child: Column(
-                                              children: [
+                                              children: const [
                                                 Text(
                                                   'INVOICES',
                                                   style:
