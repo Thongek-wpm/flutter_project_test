@@ -291,6 +291,30 @@ class _DashboardUiState extends State<DashboardUi> {
                               ),
                               Text('30')
                             ],
+                          ),
+                          Row(
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.only(top: 15.0),
+                                child: ClipRRect(
+                                  child: Image.network(
+                                    'https://media.customon.com/unsafe/1200x1200/img.customon.com/img/6385167/20157,12,2,0,34,160,32.227488151659,20,30,3cd2f9515baa0f9365fa68e7ac9e9670/merchantimagenew/youre-my-preson-hoodie-navy.jpg',
+                                    width: 50,
+                                    height: 50,
+                                    fit: BoxFit.cover,
+                                  ),
+                                  borderRadius: BorderRadius.circular(100.0),
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(left: 8.0),
+                              ),
+                              Text('Alan Cooper'),
+                              Padding(
+                                padding: const EdgeInsets.only(left: 150.0),
+                              ),
+                              Text('30')
+                            ],
                           )
                         ],
                       ),
