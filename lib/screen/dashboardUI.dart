@@ -43,19 +43,15 @@ class _DashboardUiState extends State<DashboardUi> {
                           children: [
                             Row(
                               children: [
-                                Container(
-                                  height: 100,
-                                  width: 100,
-                                  child: SfCartesianChart(
-                                    series: DoughnutSeries(
-                                      dataSource: getString(),
-                                      xValueMapper: (SalesData dataList, _) =>
-                                          dataList.x,
-                                      yValueMapper: (SalesData dataList, _) =>
-                                          dataList.y,
-                                    ),
+                                SfCartesianChart(series: [
+                                  DoughnutSeries<SalesData, String>(
+                                    dataSource: getStringData(),
+                                    xValueMapper: (SalesData dataList, _) =>
+                                        dataList.x,
+                                    yValueMapper: (SalesData dataList, _) =>
+                                        dataList.y,
                                   ),
-                                ),
+                                ]),
                                 Icon(
                                   Icons.circle,
                                   color: Colors.blue,
@@ -341,12 +337,12 @@ class _DashboardUiState extends State<DashboardUi> {
   }
 }
 
-dynamic getString() {
+dynamic getStringData() {
   List<SalesData> dataList = <SalesData>[
-    SalesData('Resume edits', 35),
-    SalesData('Interview Prep', 30),
-    SalesData('Education', 20),
-    SalesData('Other services', 15)
+    SalesData('', 35),
+    SalesData('', 30),
+    SalesData('', 20),
+    SalesData('', 15)
   ];
   return dataList;
 }
