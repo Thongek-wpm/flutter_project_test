@@ -2,6 +2,7 @@
 
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class ProfilsUi extends StatefulWidget {
   const ProfilsUi({super.key});
@@ -60,9 +61,43 @@ class _ProfilsUiState extends State<ProfilsUi> {
                             children: <Widget>[
                               Image.network(
                                 e,
-                                width: 1050,
-                                height: 1500,
+                                height: 1000,
                                 fit: BoxFit.cover,
+                              ),
+                              Column(
+                                mainAxisAlignment: MainAxisAlignment.end,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: const [
+                                  Padding(
+                                    padding: EdgeInsets.all(5.0),
+                                    child: Icon(
+                                      FontAwesomeIcons.solidCirclePlay,
+                                      size: 40.0,
+                                      color: Colors.white,
+                                    ),
+                                  ),
+                                  Padding(
+                                    padding: EdgeInsets.all(10.0),
+                                    child: Text(
+                                      'My Into Video, Some Title',
+                                      style: TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 19,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                  ),
+                                  Padding(
+                                    padding: EdgeInsets.only(left: 10),
+                                    child: Text(
+                                      'Learn more about me, my services,\my commicaiton style, and how I can help.',
+                                      style: TextStyle(
+                                        color: Colors.white,
+                                      ),
+                                    ),
+                                  ),
+                                  SizedBox(height: 10),
+                                ],
                               )
                             ],
                           ),
