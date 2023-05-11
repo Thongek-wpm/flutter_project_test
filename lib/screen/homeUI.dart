@@ -247,9 +247,9 @@ class _HomeUiState extends State<HomeUi> {
                                                 Text(
                                                   '\$8,000',
                                                   style: TextStyle(
-                                                      fontWeight:
-                                                          FontWeight.bold,
-                                                      fontSize: 15),
+                                                    fontWeight: FontWeight.bold,
+                                                    fontSize: 15,
+                                                  ),
                                                 ),
                                                 Text(
                                                   '\$3K OVERUE',

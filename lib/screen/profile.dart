@@ -61,7 +61,7 @@ class _ProfilsUiState extends State<ProfilsUi> {
                             children: <Widget>[
                               Image.network(
                                 e,
-                                height: 1000,
+                                height: 2000,
                                 fit: BoxFit.cover,
                               ),
                               Column(
@@ -105,6 +105,36 @@ class _ProfilsUiState extends State<ProfilsUi> {
                     .toList(),
               ),
             ],
+          ),
+          Padding(
+            padding: const EdgeInsets.all(15.0),
+            child: ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.white,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10),
+                ),
+              ),
+              onPressed: () {},
+              child: Padding(
+                  padding:
+                      EdgeInsets.symmetric(vertical: 10.0, horizontal: 80.0),
+                  child: Row(
+                    children: [
+                      Icon(
+                        Icons.add,
+                        color: Colors.blue,
+                      ),
+                      Text(
+                        'Record new Video',
+                        style: TextStyle(
+                            fontSize: 15,
+                            color: Colors.blue,
+                            fontWeight: FontWeight.bold),
+                      ),
+                    ],
+                  )),
+            ),
           ),
         ],
       ),
