@@ -1,7 +1,7 @@
 // ignore_for_file: import_of_legacy_library_into_null_safe
 
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_swiper/flutter_swiper.dart';
 
 class ProfilsUi extends StatefulWidget {
   const ProfilsUi({super.key});
@@ -14,44 +14,63 @@ class _ProfilsUiState extends State<ProfilsUi> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Row(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        mainAxisAlignment: MainAxisAlignment.start,
+      body: Column(
         children: [
-          const Padding(
-            padding: EdgeInsets.only(left: 20, top: 15),
-            child: Text(
-              'Videos',
-              style: TextStyle(
-                fontSize: 16,
-              ),
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.only(left: 250, top: 10),
-            child: TextButton(
-              onPressed: () {},
-              child: const Text(
-                'See all',
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              const Padding(
+                padding: EdgeInsets.only(left: 20, top: 15),
+                child: Text(
+                  'Videos',
+                  style: TextStyle(
+                    fontSize: 16,
+                  ),
                 ),
               ),
-            ),
+              Padding(
+                padding: const EdgeInsets.only(left: 250, top: 10),
+                child: TextButton(
+                  onPressed: () {},
+                  child: const Text(
+                    'See all',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+              )
+            ],
           ),
-          Center(
-            child: Swiper(
-              itemBuilder: (BuildContext context, int index) {
-                return Image.network(
-                  imageUrls[index],
-                  fit: BoxFit.cover,
-                );
-              },
-              itemCount: imageUrls.length,
-              pagination: SwiperPagination(),
-              control: SwiperControl(),
-            ),
-          )
+          Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              CarouselSlider(
+                options: CarouselOptions(
+                  enlargeCenterPage: true,
+                  enableInfiniteScroll: true,
+                ),
+                items: imageUrls
+                    .map((e) => ClipRRect(
+                          borderRadius: BorderRadius.circular(8),
+                          child: Stack(
+                            fit: StackFit.expand,
+                            children: <Widget>[
+                              Image.network(
+                                e,
+                                width: 1050,
+                                height: 1500,
+                                fit: BoxFit.cover,
+                              )
+                            ],
+                          ),
+                        ))
+                    .toList(),
+              ),
+            ],
+          ),
         ],
       ),
     );
