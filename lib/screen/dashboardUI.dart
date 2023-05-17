@@ -1,4 +1,3 @@
-// ignore: file_names
 import 'package:flutter/material.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
 
@@ -42,104 +41,27 @@ class _DashboardUiState extends State<DashboardUi> {
                       children: [
                         Column(
                           children: [
-                            Row(
+                            Column(
                               children: [
-                                Container(
-                                  width: 150,
-                                  height: 150,
-                                  child: SfCircularChart(
-                                    series: [
-                                      DoughnutSeries<Sales, String>(
-                                        dataSource: getString(),
-                                        xValueMapper: (Sales dataList, _) =>
-                                            dataList.x,
-                                        yValueMapper: (Sales dataList, _) =>
-                                            dataList.y,
-                                      )
-                                    ],
-                                  ),
+                                Row(
+                                  children: [
+                                    SizedBox(
+                                      width: 250,
+                                      height: 250,
+                                      child: SfCircularChart(
+                                        series: [
+                                          DoughnutSeries<Sales, String>(
+                                            dataSource: getString(),
+                                            xValueMapper: (Sales dataList, _) =>
+                                                dataList.x,
+                                            yValueMapper: (Sales dataList, _) =>
+                                                dataList.y,
+                                          )
+                                        ],
+                                      ),
+                                    ),
+                                  ],
                                 ),
-                                const Icon(
-                                  Icons.circle,
-                                  color: Colors.blue,
-                                ),
-                                const Padding(
-                                  padding: EdgeInsets.only(left: 5),
-                                ),
-                                const Text(
-                                  '35%',
-                                  style: TextStyle(fontWeight: FontWeight.bold),
-                                ),
-                                const Padding(
-                                  padding: EdgeInsets.only(left: 5),
-                                ),
-                                const Text('Resume edits'),
-                              ],
-                            ),
-                            const SizedBox(
-                              height: 20,
-                            ),
-                            Row(
-                              children: const [
-                                Icon(
-                                  Icons.circle,
-                                  color: Color.fromARGB(255, 202, 48, 94),
-                                ),
-                                Padding(
-                                  padding: EdgeInsets.only(left: 5),
-                                ),
-                                Text(
-                                  '30%',
-                                  style: TextStyle(fontWeight: FontWeight.bold),
-                                ),
-                                Padding(
-                                  padding: EdgeInsets.only(left: 5),
-                                ),
-                                Text('Interview prep'),
-                              ],
-                            ),
-                            const SizedBox(
-                              height: 20,
-                            ),
-                            Row(
-                              children: const [
-                                Icon(
-                                  Icons.circle,
-                                  color: Colors.pinkAccent,
-                                ),
-                                Padding(
-                                  padding: EdgeInsets.only(left: 5),
-                                ),
-                                Text(
-                                  '20%',
-                                  style: TextStyle(fontWeight: FontWeight.bold),
-                                ),
-                                Padding(
-                                  padding: EdgeInsets.only(left: 5),
-                                ),
-                                Text('Education...'),
-                              ],
-                            ),
-                            const SizedBox(
-                              height: 20,
-                            ),
-                            Row(
-                              children: const [
-                                Icon(
-                                  Icons.circle,
-                                  color: Colors.deepOrangeAccent,
-                                ),
-                                Padding(
-                                  padding: EdgeInsets.only(left: 5),
-                                ),
-                                Text(
-                                  '15%',
-                                  style: TextStyle(fontWeight: FontWeight.bold),
-                                ),
-                                Padding(
-                                  padding: EdgeInsets.only(left: 5),
-                                ),
-                                Text('Other Services'),
                               ],
                             ),
                           ],

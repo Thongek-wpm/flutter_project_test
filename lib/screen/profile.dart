@@ -47,7 +47,66 @@ class _ProfilsUiState extends State<ProfilsUi> {
           Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
+            children: <Widget>[
+              CarouselSlider(
+                options: CarouselOptions(
+                  enlargeCenterPage: true,
+                  enableInfiniteScroll: true,
+                ),
+                items: imageUrls
+                    .map((e) => ClipRRect(
+                          borderRadius: BorderRadius.circular(8),
+                          child: Stack(
+                            fit: StackFit.expand,
+                            children: <Widget>[
+                              Image.network(
+                                e,
+                                height: 2000,
+                                fit: BoxFit.cover,
+                              ),
+                              Column(
+                                mainAxisAlignment: MainAxisAlignment.end,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: const [
+                                  Padding(
+                                    padding: EdgeInsets.all(5.0),
+                                    child: Icon(
+                                      FontAwesomeIcons.solidCirclePlay,
+                                      size: 40.0,
+                                      color: Colors.white,
+                                    ),
+                                  ),
+                                  Padding(
+                                    padding: EdgeInsets.all(10.0),
+                                    child: Text(
+                                      'My Into Video, Some Title',
+                                      style: TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 19,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                  ),
+                                  Padding(
+                                    padding: EdgeInsets.only(left: 10),
+                                    child: Text(
+                                      'Learn more about me, my services,\my commicaiton style, and how I can help.',
+                                      style: TextStyle(
+                                        color: Colors.white,
+                                      ),
+                                    ),
+                                  ),
+                                  SizedBox(height: 10),
+                                ],
+                              )
+                            ],
+                          ),
+                        ))
+                    .toList(),
+              ),
+              SizedBox(
+                height: 20,
+              ),
               CarouselSlider(
                 options: CarouselOptions(
                   enlargeCenterPage: true,
@@ -117,10 +176,10 @@ class _ProfilsUiState extends State<ProfilsUi> {
               ),
               onPressed: () {},
               child: Padding(
-                  padding:
-                      EdgeInsets.symmetric(vertical: 10.0, horizontal: 80.0),
+                  padding: const EdgeInsets.symmetric(
+                      vertical: 10.0, horizontal: 80.0),
                   child: Row(
-                    children: [
+                    children: const [
                       Icon(
                         Icons.add,
                         color: Colors.blue,
