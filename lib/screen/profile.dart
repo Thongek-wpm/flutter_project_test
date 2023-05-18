@@ -104,7 +104,7 @@ class _ProfilsUiState extends State<ProfilsUi> {
                         ))
                     .toList(),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               CarouselSlider(
