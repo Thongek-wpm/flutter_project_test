@@ -1,3 +1,5 @@
+// ignore_for_file: file_names
+
 import 'package:flutter/material.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
 
@@ -43,24 +45,20 @@ class _DashboardUiState extends State<DashboardUi> {
                           children: [
                             Column(
                               children: [
-                                Row(
-                                  children: [
-                                    SizedBox(
-                                      width: 250,
-                                      height: 250,
-                                      child: SfCircularChart(
-                                        series: [
-                                          DoughnutSeries<Sales, String>(
-                                            dataSource: getString(),
-                                            xValueMapper: (Sales dataList, _) =>
-                                                dataList.x,
-                                            yValueMapper: (Sales dataList, _) =>
-                                                dataList.y,
-                                          )
-                                        ],
-                                      ),
-                                    ),
-                                  ],
+                                SizedBox(
+                                  width: 250,
+                                  height: 250,
+                                  child: SfCircularChart(
+                                    series: [
+                                      DoughnutSeries<Sales, String>(
+                                        dataSource: getString(),
+                                        xValueMapper: (Sales dataList, _) =>
+                                            dataList.x,
+                                        yValueMapper: (Sales dataList, _) =>
+                                            dataList.y,
+                                      )
+                                    ],
+                                  ),
                                 ),
                               ],
                             ),
