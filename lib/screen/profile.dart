@@ -90,7 +90,7 @@ class _ProfilsUiState extends State<ProfilsUi> {
                                   Padding(
                                     padding: EdgeInsets.only(left: 10),
                                     child: Text(
-                                      'Learn more about me, my services,\my commicaiton style, and how I can help.',
+                                      'Learn more about me, my services,\my commicaiton style, \and how I can help.',
                                       style: TextStyle(
                                         color: Colors.white,
                                       ),
