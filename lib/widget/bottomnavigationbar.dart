@@ -51,7 +51,7 @@ class _BottomWidgetState extends State<BottomWidget> {
             label: 'Dashboard',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.person),
+            icon: Icon(Icons.video_collection_rounded),
             label: 'Videos',
           ),
         ],

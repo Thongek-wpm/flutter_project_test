@@ -112,7 +112,7 @@ class _ProfilsUiState extends State<ProfilsUi> {
                   enlargeCenterPage: true,
                   enableInfiniteScroll: true,
                 ),
-                items: imageUrls
+                items: imageUrl
                     .map((e) => ClipRRect(
                           borderRadius: BorderRadius.circular(8),
                           child: Stack(
@@ -207,4 +207,12 @@ List<String> imageUrls = [
   'https://images.freeimages.com/images/previews/ac9/railway-hdr-1361893.jpg',
   'https://cdn.pixabay.com/photo/2013/10/09/02/27/lake-192990__340.jpg',
   'https://us.123rf.com/450wm/zagzig/zagzig1903/zagzig190300032/119363177-sunrise-at-the-old-boathouse-at-pooley-bridge-on-the-shores-of-ullswater-in-the-lake-district-in.jpg?ver=6'
+];
+
+List<String> imageUrl = [
+  'https://cdn.pixabay.com/photo/2023/05/16/09/13/lamps-7997033__340.jpg',
+  'https://cdn.pixabay.com/photo/2023/05/17/20/12/mannheim-8000972_640.jpg',
+  'https://cdn.pixabay.com/photo/2023/04/14/08/34/grand-canyon-7924473_640.jpg',
+  'https://cdn.pixabay.com/photo/2023/03/20/15/37/postcards-7865295_640.jpg',
+  'https://cdn.pixabay.com/photo/2023/03/17/16/41/traffic-7859033_640.jpg'
 ];

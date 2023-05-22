@@ -42,24 +42,18 @@ class _DashboardUiState extends State<DashboardUi> {
                     Row(
                       children: [
                         Column(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Column(
-                              children: [
-                                SizedBox(
-                                  width: 250,
-                                  height: 250,
-                                  child: SfCircularChart(
-                                    series: [
-                                      DoughnutSeries<Sales, String>(
-                                        dataSource: getString(),
-                                        xValueMapper: (Sales dataList, _) =>
-                                            dataList.x,
-                                        yValueMapper: (Sales dataList, _) =>
-                                            dataList.y,
-                                      )
-                                    ],
-                                  ),
-                                ),
+                            SfCircularChart(
+                              series: [
+                                DoughnutSeries<Sales, String>(
+                                  dataSource: getString(),
+                                  xValueMapper: (Sales dataList, _) =>
+                                      dataList.x,
+                                  yValueMapper: (Sales dataList, _) =>
+                                      dataList.y,
+                                )
                               ],
                             ),
                           ],
